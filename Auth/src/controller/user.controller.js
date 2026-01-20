@@ -19,7 +19,9 @@ export const createUser = async (req, res) => {
     role,
   });
 
-  const token = jwt.sign({ id: user._id }, "secret", { expiresIn: "1d" });
+  const token = jwt.sign({ id: user._id, role: user.role }, "secret", {
+    expiresIn: "1d",
+  });
 
   res.cookie("token", token, {
     httpOnly: process.env.NODE_ENV === "production",
@@ -57,7 +59,9 @@ export const loginUser = async (req, res) => {
     });
   }
 
-  const token = jwt.sign({ id: user._id }, "secret", { expiresIn: "1d" });
+  const token = jwt.sign({ id: user._id, role: user.role }, "secret", {
+    expiresIn: "1d",
+  });
 
   res.cookie("token", token, {
     httpOnly: process.env.NODE_ENV === "production",
