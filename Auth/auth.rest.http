@@ -7,19 +7,19 @@ Content-Type: application/json
 {
     "fullName": {
         "firstName": "test",
-        "lastName": "seller"
+        "lastName": "user"
     },
-    "email": "test_seller@example.com",
-    "password": "seller",
-    "role" : "seller"
+    "email": "test_user@example.com",
+    "password": "user",
+    "role": "user"
 }
 
 POST http://localhost:3000/users/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "email": "test_seller@example.com",
-    "password": "seller"
+    "email": "test_user@example.com",
+    "password": "user"
 }
 
 

@@ -1,0 +1,18 @@
+POST http://localhost:3002/orders HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NmY1NTFkZDZmYWJkYzdiODFiM2UwZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY4OTAzOTY2LCJleHAiOjE3Njg5OTAzNjZ9.SECGWMvTzVfU9qyAGNfsSQd2aTI3eaRyAnAWTNoaDkA
+
+{
+    "products" : [
+        {
+            "productId" : "696f4b018c6c87dbe1f1c0e1",
+            "quantity" : 1,
+            "price" : 100
+        },
+        {
+            "productId" : "696f4b1d8c6c87dbe1f1c0e3",
+            "quantity" : 1,
+            "price" : 300
+        }
+    ]
+}
