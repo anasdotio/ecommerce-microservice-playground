@@ -1,0 +1,16 @@
+POST http://localhost:3001/products HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NmY0OWZjZWFkYjM3MDM4ODhhNjczNyIsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE3Njg5MDExMTYsImV4cCI6MTc2ODk4NzUxNn0._Ia0jXiQPo7i034ttNWzK7grTi7ZPIvlP_73jCsH7cU
+
+{
+    "title" : "Product 1",
+    "description" : "Product 2 description",
+    "price" : 4000,
+    "stock" : 10
+}
+
+
+
+GET http://localhost:3001/products HTTP/1.1
+
+GET http://localhost:3001/products/696f47164f56f001df34eb42 HTTP/1.1
