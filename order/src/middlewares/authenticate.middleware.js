@@ -1,4 +1,3 @@
-import userModel from "../model/user.model.js";
 import jwt from "jsonwebtoken";
 const authenticate = async (req, res, next) => {
   let token;
@@ -29,7 +28,9 @@ const authenticate = async (req, res, next) => {
       });
     }
 
-    req.user = await userModel.findById(decoded.id);
+    console.log(decoded);
+
+    req.user = decoded;
     next();
   } catch (err) {
     return res.status(401).json({
