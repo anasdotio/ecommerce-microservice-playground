@@ -16,3 +16,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NmY1NTFkZ
         }
     ]
 }
+
+GET  http://localhost:3002/orders HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NmY1NTFkZDZmYWJkYzdiODFiM2UwZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY5MTcxOTkzLCJleHAiOjE3NjkyNTgzOTN9.XNiZ5FZZ-q9iNX1xnm6DL7iKWaRrs24mvgQfHN2_y24
