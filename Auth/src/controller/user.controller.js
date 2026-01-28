@@ -1,3 +1,4 @@
+import { publishToQueue } from "../broker/broker.js";
 import userModel from "../model/user.model.js";
 import jwt from "jsonwebtoken";
 export const createUser = async (req, res) => {
@@ -17,6 +18,12 @@ export const createUser = async (req, res) => {
     email,
     password,
     role,
+  });
+
+  await publishToQueue("AUTH_NOTIFICATION.USER_CREATED", {
+    id: user._id,
+    fullName: user.fullName,
+    email: user.email,
   });
 
   const token = jwt.sign({ id: user._id, role: user.role }, "secret", {

@@ -6,10 +6,10 @@ Content-Type: application/json
 
 {
     "fullName": {
-        "firstName": "test",
-        "lastName": "user"
+        "firstName": "dev",
+        "lastName": "code"
     },
-    "email": "test_user@example.com",
+    "email": "anas.dev.code@gmail.com",
     "password": "user",
     "role": "user"
 }

@@ -2,6 +2,7 @@ import axios from "axios";
 import orderModel from "../model/order.model.js";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
+import { publishToQueue } from "../broker/broker.js";
 
 export const createOrder = async (req, res) => {
   const token = req.headers.authorization?.split(" ")[1];
@@ -62,6 +63,8 @@ export const createOrder = async (req, res) => {
     products: orderItems,
     totalAmount,
   });
+
+  await publishToQueue("ORDER_NOTIFICATION.ORDER_CREATED", order);  
 
   res.status(201).json({ success: true, data: order });
 };
